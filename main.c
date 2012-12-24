@@ -26,20 +26,22 @@
  * GND  4|    |5  IR_RX
  *       +----+
  *
- * The ATtiny85 (http://www.sparkfun.com/products/9378) is generally the easiest to find
- * 8-pin DIP AVR.
+ * The ATtiny85 (http://www.sparkfun.com/products/9378) is generally the easiest
+ * to find 8-pin DIP AVR.
  *
  * IR_RX should be connected to the output pin of an IR Receiver Diode such as:
  *  - TSOP85338 IR Receiver Breakout: http://www.sparkfun.com/products/8554
  *  - TSOP38238 IR Receiver Diode (http://www.sparkfun.com/products/10266)
  *
- * IR_TX should be connected to a current-limited IR LED or a high-power switched LED,
- * such as:
- *  - LED Infrared 950nm (https://www.sparkfun.com/products/9349) with a 330 Ohm resistor
+ * IR_TX should be connected to a current-limited IR LED or a high-power
+ * switched LED, such as:
+ *  - LED Infrared 950nm (https://www.sparkfun.com/products/9349) with a 330 Ohm
+ *    resistor
  *  - Max Power IR LED Kit (http://www.sparkfun.com/products/10732)
 
- * The IR Control Kit Retail (http://www.sparkfun.com/products/10783) from SparkFun
- * Electronics contains everything you need to get started, other than the ATtiny25/45/85.
+ * The IR Control Kit Retail (http://www.sparkfun.com/products/10783) from
+ * SparkFun Electronics contains everything you need to get started, other than
+ * the ATtiny25/45/85.
  */
 
 #include <avr/interrupt.h>
