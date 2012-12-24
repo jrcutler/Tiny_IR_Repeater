@@ -1,7 +1,7 @@
 # Name: Makefile
-# Author: <insert your name here>
-# Copyright: <insert your copyright message here>
-# License: <insert your license reference here>
+# Author: Justin R. Cutler <justin.r.cutler@gmail.com>
+# Copyright: Copyright 2012 Justin R. Cutler
+# License: GPL
 
 # This is a prototype Makefile. Modify it according to your needs.
 # You should at least check the settings for

@@ -1,7 +1,7 @@
 /* Name: main.c
- * Author: <insert your name here>
- * Copyright: <insert your copyright message here>
- * License: <insert your license reference here>
+ * Author: Justin R. Cutler <justin.r.cutler@gmail.com>
+ * Copyright: 2012 Justin R. Cutler
+ * License: GPL
  */
 
 #include <avr/io.h>
