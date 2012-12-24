@@ -19,12 +19,12 @@
 /*
  * ATtiny25/45/85 connections:
  *
- *       +-\/-+
- * Vcc  1|o   |8  Vcc
- *  NC  2|    |7  NC
- *  NC  3|    |6  IR_TX
- * GND  4|    |5  IR_RX
- *       +----+
+ *         +-\/-+
+ *   Vcc  1|o   |8  Vcc
+ *    NC  2|    |7  NC
+ *    NC  3|    |6  IR_TX
+ *   GND  4|    |5  IR_RX
+ *         +----+
  *
  * The ATtiny85 (http://www.sparkfun.com/products/9378) is generally the easiest
  * to find 8-pin DIP AVR.
@@ -38,7 +38,7 @@
  *  - LED Infrared 950nm (https://www.sparkfun.com/products/9349) with a 330 Ohm
  *    resistor
  *  - Max Power IR LED Kit (http://www.sparkfun.com/products/10732)
-
+ *
  * The IR Control Kit Retail (http://www.sparkfun.com/products/10783) from
  * SparkFun Electronics contains everything you need to get started, other than
  * the ATtiny25/45/85.
