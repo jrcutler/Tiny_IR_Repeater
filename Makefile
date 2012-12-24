@@ -1,6 +1,6 @@
 # Name: Makefile
 # Author: Justin R. Cutler <justin.r.cutler@gmail.com>
-# Copyright: Copyright 2012 Justin R. Cutler
+# Copyright: 2012 Justin R. Cutler
 # License: GPL
 
 # This is a prototype Makefile. Modify it according to your needs.
@@ -17,30 +17,30 @@
 #                   default_serial = "avrdoper"
 # FUSES ........ Parameters for avrdude to flash the fuses appropriately.
 
-DEVICE     = atmega8
-CLOCK      = 8000000
+DEVICE     = attiny85
+CLOCK      = 1000000
 PROGRAMMER = #-c stk500v2 -P avrdoper
 OBJECTS    = main.o
-FUSES      = -U hfuse:w:0xd9:m -U lfuse:w:0x24:m
+FUSES      = -U hfuse:w:0xdf:m -U lfuse:w:0x62:m
 
-# ATMega8 fuse bits used above (fuse bits for other devices are different!):
-# Example for 8 MHz internal oscillator
+# ATtiny85 fuse bits used above (fuse bits for other devices are different!):
+# Example for 1 MHz internal oscillator
 # Fuse high byte:
-# 0xd9 = 1 1 0 1   1 0 0 1 <-- BOOTRST (boot reset vector at 0x0000)
-#        ^ ^ ^ ^   ^ ^ ^------ BOOTSZ0
-#        | | | |   | +-------- BOOTSZ1
+# 0xd9 = 1 1 0 1   1 1 1 1
+#        ^ ^ ^ ^   ^ \-+-/
+#        | | | |   |   +------ BODLEVEL 2..0 (disabled)
 #        | | | |   +---------- EESAVE (set to 0 to preserve EEPROM over chip erase)
-#        | | | +-------------- CKOPT (clock option, depends on oscillator type)
+#        | | | +-------------- WDTON (if set to 0, watchdog is always on)
 #        | | +---------------- SPIEN (if set to 1, serial programming is disabled)
-#        | +------------------ WDTON (if set to 0, watchdog is always on)
+#        | +------------------ DWEN (if set to 0, DebugWIRE is enabled)
 #        +-------------------- RSTDISBL (if set to 0, RESET pin is disabled)
 # Fuse low byte:
-# 0x24 = 0 0 1 0   0 1 0 0
+# 0x62 = 0 1 1 0   0 0 1 0
 #        ^ ^ \ /   \--+--/
 #        | |  |       +------- CKSEL 3..0 (8M internal RC)
 #        | |  +--------------- SUT 1..0 (slowly rising power)
-#        | +------------------ BODEN (if 0, brown-out detector is enabled)
-#        +-------------------- BODLEVEL (if 0: 4V, if 1: 2.7V)
+#        | +------------------ CKOUT (Clock output enabled)
+#        +-------------------- CKDIV8 (Clock divided by 8)
 #
 # For computing fuse byte values for other devices and options see
 # the fuse bit calculator at http://www.engbedded.com/fusecalc/
