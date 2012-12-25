@@ -41,18 +41,18 @@ FUSES      = -U hfuse:w:0xdf:m -U lfuse:w:0x62:m
 # 0xd9 = 1 1 0 1   1 1 1 1
 #        ^ ^ ^ ^   ^ \-+-/
 #        | | | |   |   +------ BODLEVEL 2..0 (disabled)
-#        | | | |   +---------- EESAVE (set to 0 to preserve EEPROM over chip erase)
-#        | | | +-------------- WDTON (if set to 0, watchdog is always on)
-#        | | +---------------- SPIEN (if set to 1, serial programming is disabled)
-#        | +------------------ DWEN (if set to 0, DebugWIRE is enabled)
-#        +-------------------- RSTDISBL (if set to 0, RESET pin is disabled)
+#        | | | |   +---------- EESAVE (EEPROM not preserved over chip erase)
+#        | | | +-------------- WDTON (watchdog not always on)
+#        | | +---------------- SPIEN (serial programming is enabled)
+#        | +------------------ DWEN (DebugWIRE disabled)
+#        +-------------------- RSTDISBL (RESET pin enabled)
 # Fuse low byte:
 # 0x62 = 0 1 1 0   0 0 1 0
 #        ^ ^ \ /   \--+--/
-#        | |  |       +------- CKSEL 3..0 (8M internal RC)
+#        | |  |       +------- CKSEL 3..0 (8MHz internal RC)
 #        | |  +--------------- SUT 1..0 (slowly rising power)
-#        | +------------------ CKOUT (Clock output enabled)
-#        +-------------------- CKDIV8 (Clock divided by 8)
+#        | +------------------ CKOUT (clock output disabled)
+#        +-------------------- CKDIV8 (clock divided by 8)
 #
 # For computing fuse byte values for other devices and options see
 # the fuse bit calculator at http://www.engbedded.com/fusecalc/
