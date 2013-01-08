@@ -30,7 +30,7 @@
  * to find 8-pin DIP AVR.
  *
  * IR_RX should be connected to the output pin of an IR Receiver Diode such as:
- *  - TSOP85338 IR Receiver Breakout: http://www.sparkfun.com/products/8554
+ *  - TSOP85338 IR Receiver Breakout (http://www.sparkfun.com/products/8554)
  *  - TSOP38238 IR Receiver Diode (http://www.sparkfun.com/products/10266)
  *
  * IR_TX should be connected to a current-limited IR LED or a high-power
