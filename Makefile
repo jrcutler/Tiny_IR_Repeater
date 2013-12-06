@@ -38,7 +38,7 @@ FUSES      = -U hfuse:w:0xdf:m -U lfuse:w:0x62:m
 # ATtiny85 fuse bits used above (fuse bits for other devices are different!):
 # Example for 1 MHz internal oscillator
 # Fuse high byte:
-# 0xd9 = 1 1 0 1   1 1 1 1
+# 0xdf = 1 1 0 1   1 1 1 1
 #        ^ ^ ^ ^   ^ \-+-/
 #        | | | |   |   +------ BODLEVEL 2..0 (disabled)
 #        | | | |   +---------- EESAVE (EEPROM not preserved over chip erase)
