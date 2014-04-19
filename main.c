@@ -94,10 +94,10 @@ void setup(void)
      * IR transmitter setup
      */
 
-    /* enable IR modulation (50% duty cycle) via Timer1 */
+    /* enable IR modulation (~33% duty cycle) via Timer1 */
     TCCR1 = _BV(PWM1A) | _BV(CS12);
     OCR1C = (((F_CPU / 8 / IR_MODULATION)) - 1);
-    OCR1A = OCR1C / 2;
+    OCR1A = OCR1C / 3;
     /* set IR_TX as output */
     DDRB |= _BV(IR_TX);
     /* turn IR_TX off when not enabled */
